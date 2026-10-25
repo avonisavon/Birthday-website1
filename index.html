@@ -437,7 +437,8 @@
 
     .photo {
       position: relative;
-      aspect-ratio: 3 / 4;
+      width: 100%;
+      height: 260px; /* Fixed height for all devices */
       border-radius: 22px;
       overflow: hidden;
       background: linear-gradient(
@@ -470,12 +471,13 @@
     .photo img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* Fills the box perfectly */
       display: block;
     }
 
     .rotate-img {
-      transform: rotate(-90deg) scale(1.35);
+      /* Scales up the rotated image so it covers the whole box */
+      transform: rotate(-90deg) scale(1.4);
     }
 
     .story {
@@ -1085,6 +1087,10 @@
       .paper-body {
         font-size: 1.02rem;
       }
+      
+      .photo {
+        height: 320px;
+      }
     }
 
     @media (min-width: 1200px) {
@@ -1126,6 +1132,10 @@
 
       .photos {
         gap: 10px;
+      }
+      
+      .photo {
+        height: 200px;
       }
 
       .story h2 {
